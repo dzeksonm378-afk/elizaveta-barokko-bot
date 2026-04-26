@@ -3,6 +3,7 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { createBot } from "../src/bot";
 
 const bot = createBot();
+const webhookSecret = process.env.WEBHOOK_SECRET;
 
 export default async function handler(
   req: VercelRequest,
@@ -15,8 +16,6 @@ export default async function handler(
   if (req.method !== "POST") {
     return res.status(405).send("Method Not Allowed");
   }
-
-  const webhookSecret = process.env.WEBHOOK_SECRET;
 
   if (webhookSecret) {
     const telegramSecret = req.headers["x-telegram-bot-api-secret-token"];
