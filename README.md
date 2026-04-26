@@ -95,6 +95,29 @@ GUIDE_DM_URL=
 
 После деплоя не держите одновременно локальный `npm run dev` с тем же `BOT_TOKEN`, иначе polling будет конфликтовать между локальным ботом и ботом на Koyeb.
 
+## Деплой на Vercel
+
+1. Импортируйте GitHub-репозиторий в Vercel.
+2. Добавьте Environment Variables:
+   - `BOT_TOKEN`
+   - `CHANNEL_URL`
+   - `GUIDE_DM_URL`
+   - `WEBHOOK_SECRET`
+   - `SETUP_SECRET`
+3. После деплоя откройте ссылку:
+
+```text
+https://<vercel-domain>/api/set-webhook?secret=<SETUP_SECRET>
+```
+
+4. Проверьте webhook endpoint:
+
+```text
+https://<vercel-domain>/api/bot
+```
+
+5. После установки webhook не запускайте локальный polling с тем же токеном одновременно.
+
 ## Структура проекта
 
 ```text
