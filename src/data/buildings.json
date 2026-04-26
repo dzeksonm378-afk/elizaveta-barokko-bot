@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "title": "Дом компании Зингер",
+    "district": "Центральный",
+    "style": "модерн",
+    "architect": "Павел Сюзор",
+    "address": "Невский проспект, 28",
+    "description": "Один из самых узнаваемых домов Петербурга с эффектным стеклянным куполом и декоративными фасадами.",
+    "channelUrl": "https://t.me/example_channel/1",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Singer+House"
+  },
+  {
+    "id": 2,
+    "title": "Елисеевский магазин",
+    "district": "Центральный",
+    "style": "северный модерн",
+    "architect": "Гавриил Барановский",
+    "address": "Невский проспект, 56",
+    "description": "Парадное торговое здание начала XX века с крупными витражами и богатым скульптурным декором.",
+    "channelUrl": "https://t.me/example_channel/2",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Eliseev+Store"
+  },
+  {
+    "id": 3,
+    "title": "Дом Бассейного товарищества",
+    "district": "Петроградский",
+    "style": "северный модерн",
+    "architect": "Алексей Бубырь и Николай Васильев",
+    "address": "Каменноостровский проспект, 26-28",
+    "description": "Доходный дом с выразительными эркерами, асимметрией и характерной пластикой северного модерна.",
+    "channelUrl": "https://t.me/example_channel/3",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Bassein+Partnership+House"
+  },
+  {
+    "id": 4,
+    "title": "Особняк Кшесинской",
+    "district": "Петроградский",
+    "style": "модерн",
+    "architect": "Александр фон Гоген",
+    "address": "Улица Куйбышева, 2-4",
+    "description": "Элегантный особняк с асимметричной композицией и мягкой линией фасада, характерной для раннего модерна.",
+    "channelUrl": "https://t.me/example_channel/4",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Kshesinskaya+Mansion"
+  },
+  {
+    "id": 5,
+    "title": "Смольный собор",
+    "district": "Центральный",
+    "style": "барокко",
+    "architect": "Бартоломео Растрелли",
+    "address": "Площадь Растрелли, 1",
+    "description": "Торжественный собор с бело-голубыми фасадами и праздничным силуэтом, один из символов петербургского барокко.",
+    "channelUrl": "https://t.me/example_channel/5",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Smolny+Cathedral"
+  },
+  {
+    "id": 6,
+    "title": "Исаакиевский собор",
+    "district": "Адмиралтейский",
+    "style": "классицизм",
+    "architect": "Огюст Монферран",
+    "address": "Исаакиевская площадь, 4",
+    "description": "Монументальный собор с гранитными колоннами и золотым куполом, заметный почти из любой точки центра.",
+    "channelUrl": "https://t.me/example_channel/6",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Saint+Isaac+Cathedral"
+  },
+  {
+    "id": 7,
+    "title": "Казанский собор",
+    "district": "Центральный",
+    "style": "ампир",
+    "architect": "Андрей Воронихин",
+    "address": "Казанская площадь, 2",
+    "description": "Крупный храм с полукруглой колоннадой, который формирует один из самых известных городских ансамблей.",
+    "channelUrl": "https://t.me/example_channel/7",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Kazan+Cathedral"
+  },
+  {
+    "id": 8,
+    "title": "Витебский вокзал",
+    "district": "Адмиралтейский",
+    "style": "модерн",
+    "architect": "Станислав Бржозовский и Симон Минаш",
+    "address": "Загородный проспект, 52",
+    "description": "Один из самых красивых вокзалов города с парадной лестницей, металлом, стеклом и витражными деталями.",
+    "channelUrl": "https://t.me/example_channel/8",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Vitebsky+Railway+Station"
+  },
+  {
+    "id": 9,
+    "title": "Никольский морской собор",
+    "district": "Адмиралтейский",
+    "style": "барокко",
+    "architect": "Савва Чевакинский",
+    "address": "Никольская площадь, 1/3",
+    "description": "Пятиглавый собор с колокольней и выразительной окраской фасадов, важный памятник морского Петербурга.",
+    "channelUrl": "https://t.me/example_channel/9",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Nicholas+Naval+Cathedral"
+  },
+  {
+    "id": 10,
+    "title": "Дворец Белосельских-Белозерских",
+    "district": "Центральный",
+    "style": "необарокко",
+    "architect": "Андрей Штакеншнейдер",
+    "address": "Невский проспект, 41",
+    "description": "Яркий дворец с насыщенным декором, который эффектно завершает перспективу набережки Фонтанки.",
+    "channelUrl": "https://t.me/example_channel/10",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Beloselsky+Beloozersky+Palace"
+  },
+  {
+    "id": 11,
+    "title": "Дом Толстого",
+    "district": "Центральный",
+    "style": "северный модерн",
+    "architect": "Фёдор Лидваль",
+    "address": "Улица Рубинштейна, 15-17",
+    "description": "Знаменитый доходный дом с арками и внутренними дворами, сочетающий масштаб и уют жилой архитектуры.",
+    "channelUrl": "https://t.me/example_channel/11",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Tolstoy+House"
+  },
+  {
+    "id": 12,
+    "title": "Академия художеств",
+    "district": "Василеостровский",
+    "style": "классицизм",
+    "architect": "Жан-Батист Валлен-Деламот и Александр Кокоринов",
+    "address": "Университетская набережная, 17",
+    "description": "Строгое и торжественное здание на Неве, важное для истории художественного образования в России.",
+    "channelUrl": "https://t.me/example_channel/12",
+    "imageUrl": "https://placehold.co/1200x800/png?text=Academy+of+Arts"
+  }
+]
+

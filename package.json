@@ -1,0 +1,32 @@
+{
+  "name": "spb-architecture-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot MVP for architecture discoveries in Saint Petersburg.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "architecture",
+    "saint-petersburg",
+    "telegraf"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
