@@ -118,6 +118,72 @@ https://<vercel-domain>/api/bot
 
 5. После установки webhook не запускайте локальный polling с тем же токеном одновременно.
 
+## Деплой на VPS Timeweb
+
+Что нужно на сервере:
+
+- Ubuntu 22.04/24.04
+- Node.js 20+
+- Git
+- PM2
+
+Команды для первого запуска:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y git curl
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo npm install -g pm2
+
+git clone <URL_РЕПОЗИТОРИЯ>
+cd <ПАПКА_ПРОЕКТА>
+nano .env
+```
+
+Содержимое `.env`:
+
+```env
+BOT_TOKEN=реальный_токен
+CHANNEL_URL=https://t.me/elizaveta_guide_spb
+GUIDE_DM_URL=https://t.me/lisademyanova
+```
+
+Дальше:
+
+```bash
+npm install
+npm run build
+pm2 start ecosystem.config.cjs
+pm2 save
+pm2 startup
+```
+
+Команды обслуживания:
+
+```bash
+pm2 status
+pm2 logs elizaveta-barokko-bot
+pm2 restart elizaveta-barokko-bot
+pm2 stop elizaveta-barokko-bot
+```
+
+Команды обновления проекта:
+
+```bash
+git pull
+npm install
+npm run build
+pm2 restart elizaveta-barokko-bot
+```
+
+Важно:
+
+- Не запускайте локально `npm run dev` с тем же токеном одновременно с VPS.
+- После переезда на VPS Vercel webhook больше не нужен, потому что `src/index.ts` вызывает `deleteWebhook()`.
+- `.env` никогда нельзя коммитить.
+- Перед production-запуском перевыпустите `BOT_TOKEN` в BotFather.
+
 ## Структура проекта
 
 ```text

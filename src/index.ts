@@ -15,9 +15,17 @@ healthcheckServer.listen(port, () => {
   console.log(`Healthcheck server is running on port ${port}`);
 });
 
-bot.launch().then(async () => {
+async function main() {
+  await bot.telegram.deleteWebhook();
+  await bot.launch();
+
   const me = await bot.telegram.getMe();
   console.log(`Bot started successfully: @${me.username}`);
+}
+
+main().catch((error) => {
+  console.error("Failed to start bot:", error);
+  process.exit(1);
 });
 
 process.once("SIGINT", () => {
