@@ -184,6 +184,53 @@ pm2 restart elizaveta-barokko-bot
 - `.env` никогда нельзя коммитить.
 - Перед production-запуском перевыпустите `BOT_TOKEN` в BotFather.
 
+## Telegram API proxy через Cloudflare Worker
+
+Если на VPS не открывается `https://api.telegram.org`, можно оставить бота на VPS и отправлять запросы Telegraf к Telegram API через Cloudflare Worker.
+
+1. Авторизуйтесь в Cloudflare:
+
+```bash
+npx wrangler login
+```
+
+2. Добавьте secret для Worker:
+
+```bash
+npm run cf:proxy:secret
+```
+
+3. Задеплойте Worker:
+
+```bash
+npm run cf:proxy:deploy
+```
+
+4. Скопируйте URL Worker из вывода Wrangler.
+
+5. На VPS добавьте в `.env`:
+
+```env
+TELEGRAM_API_ROOT=https://<worker-domain>/telegram/<PROXY_SECRET>
+```
+
+6. Обновите проект на VPS:
+
+```bash
+git pull
+npm install
+npm run build
+pm2 restart elizaveta-barokko-bot
+```
+
+7. Проверьте прокси:
+
+```bash
+curl -4 -m 20 "https://<worker-domain>/telegram/<PROXY_SECRET>/bot${BOT_TOKEN}/getMe"
+```
+
+`PROXY_SECRET` не нужно добавлять в код или Git. Он хранится в Cloudflare Worker secrets, а на VPS используется только внутри `TELEGRAM_API_ROOT`.
+
 ## Структура проекта
 
 ```text

@@ -1053,12 +1053,19 @@ bot.catch(async (error, ctx) => {
 
 export function createBot() {
   const token = process.env.BOT_TOKEN;
+  const telegramApiRoot = process.env.TELEGRAM_API_ROOT;
 
   if (!token) {
     throw new Error("BOT_TOKEN is required");
   }
 
-  const bot = new Telegraf(token);
+  const bot = telegramApiRoot
+    ? new Telegraf(token, {
+        telegram: {
+          apiRoot: telegramApiRoot
+        }
+      })
+    : new Telegraf(token);
 
   registerBotHandlers(bot);
 

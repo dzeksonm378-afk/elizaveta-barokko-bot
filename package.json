@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "cf:proxy:deploy": "cd worker-proxy && wrangler deploy",
+    "cf:proxy:secret": "cd worker-proxy && wrangler secret put PROXY_SECRET"
   },
   "keywords": [
     "telegram",
@@ -25,9 +27,11 @@
     "telegraf": "^4.16.3"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260426.1",
     "@types/node": "^25.6.0",
     "@vercel/node": "^5.7.13",
     "tsx": "^4.21.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.85.0"
   }
 }
