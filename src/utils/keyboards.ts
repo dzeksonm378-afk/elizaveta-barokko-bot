@@ -8,10 +8,10 @@ import { QuizQuestion } from "../types/quizQuestion";
 
 const QUIZ_OPTION_LETTERS = ["А", "Б", "В", "Г", "Д", "Е"];
 
-const getQuizOptionLabel = (option: string, index: number): string => {
+const getQuizOptionButtonLabel = (index: number): string => {
   const letter = QUIZ_OPTION_LETTERS[index] || String(index + 1);
 
-  return `${letter}) ${option}`;
+  return `${letter})`;
 };
 
 export type CategoryButtonOption = {
@@ -114,10 +114,10 @@ export const getPostListKeyboard = (
 };
 
 export const getQuizAnswerKeyboard = (question: QuizQuestion) => {
-  const answerRows = question.options.map((option, index) => {
+  const answerRows = question.options.map((_, index) => {
     return [
       Markup.button.callback(
-        getQuizOptionLabel(option, index),
+        getQuizOptionButtonLabel(index),
         `quiz:answer:${question.id}:${index}`
       )
     ];

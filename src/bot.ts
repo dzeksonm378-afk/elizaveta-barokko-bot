@@ -282,12 +282,20 @@ const getQuizAnswerLabel = (index: number, option: string): string => {
 };
 
 const getQuizQuestionText = (question: QuizQuestion): string => {
+  const optionLines = question.options.map((option, index) => {
+    return getQuizAnswerLabel(index, option);
+  });
+
   return [
     "🎲 Викторина",
     "",
     `🖼️ ${question.question}`,
     "",
-    "Выбери вариант ответа:"
+    "Выбери вариант ответа:",
+    "",
+    ...optionLines,
+    "",
+    "Кнопки ниже:"
   ].join("\n");
 };
 
